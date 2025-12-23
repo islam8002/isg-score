@@ -14,7 +14,7 @@ app.use(express.static(path.join(__dirname, "public")));
 const PORT = process.env.PORT || 3000;
 
 // ضع API KEY هنا
-const API_KEY = "islam1234";
+const API_KEY = process.env.API_KEY;
 
 app.get("/live", async (req, res) => {
   try {
@@ -32,4 +32,5 @@ app.get("/live", async (req, res) => {
 app.listen(PORT, () => {
   console.log(`⚽ Server running on port ${PORT}`);
 });
+
 
